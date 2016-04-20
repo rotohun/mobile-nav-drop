@@ -13,11 +13,17 @@ jQuery(document).ready(function($) {
 		//Create an option
 		var $option = $("<option></option>");
 
+		if ($anchor.parent().hasClass('selected')) {
+
+			$option.prop("selected", true)
+
+		}
+
+
 		// options value is the href
 		$option.val($anchor.attr('href'));
 		//options text is the text of link
 
-		var anchorText = $anchor.text();
 
 		$option.text($anchor.text());
 
@@ -32,12 +38,11 @@ jQuery(document).ready(function($) {
 	$button.click(function(event) {
 		event.preventDefault();
 
-		$select.val();
+		window.location = $select.val();
 
 	});
 		//Go to select's location
-	//modify css to hide links on small resolution and show button and select
-	//Also hides select and button on larger resolutions
+
 	// Deal with selected options depending on the page.
 
 });
