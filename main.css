@@ -63,3 +63,22 @@ p {
 	text-align: center;
 	color: #777;
 }
+
+
+
+/**
+modify css to hide links on small resolution and show button and select
+Also hides select and button on larger resolutions
+*/
+
+@media (min-width: 320px) and (max-width: 568px) {
+    .menu ul{
+    	display: none;
+    }
+}
+
+@media (min-width: 568px){
+    .menu select, .menu button{
+    	display: none;
+    }
+}
